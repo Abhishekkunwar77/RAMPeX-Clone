@@ -39,7 +39,7 @@ const Splash = () => {
                   .getElementById("footer")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-[#3e0099] hover:bg-[#32007a] hover:cursor-pointer text-white font-semibold px-12 py-3.5 rounded-full transition-all duration-300 text-lg shadow-lg"
+              className="bg-[#250562] hover:bg-[#32007a] hover:cursor-pointer text-white font-semibold px-12 py-3.5 rounded-full transition-all duration-300 text-lg shadow-lg"
             >
               Read More
             </button>
@@ -68,14 +68,14 @@ const Splash = () => {
 
       {/* Milestones Section */}
       <section className="bg-[#f7f7fb] mt-[-200px] pb-16 px-6 text-center ">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#250562] mb-10">
+        <h2 className="text-3xl md:text-4xl  text-[#250562] mb-10">
           Milestones Achieved
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 ">
           {milestones.map((milestone, index) => (
             <div key={index}>
-              <div className="text-4xl md:text-5xl font-extrabold text-[#250562] ">
+              <div className="text-4xl md:text-5xl font-bold text-[#250562] ">
                 {milestone.count}
               </div>
               <p className="mt-2 text-[#003366] text-sm md:text-base font-medium">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +17,7 @@ import co9 from "../assets/co9.jpeg";
 import co10 from "../assets/co10.jpeg";
 import co11 from "../assets/co11.png";
 import co12 from "../assets/co12.jpg";
-
+  
 const courseData = [
   {
     image: co1,
@@ -45,7 +46,7 @@ const courseData = [
     bullets: [
       "Explore Java programming for building robust, high-performance applications.",
       "Java Developer, Software Engineer, Backend Developer.",
-      "Enterprise solutions, finance, mobile development.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -55,7 +56,7 @@ const courseData = [
     bullets: [
       "Learn Python for web development, data science, automation, and more.",
       "Python Developer, Data Scientist, Automation Engineer.",
-      "Tech, finance, research, startups.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -65,7 +66,7 @@ const courseData = [
     bullets: [
       "Understand and implement core data structures and algorithms for efficient problem solving.",
       "Software Engineer, Algorithm Engineer, Systems Architect.",
-      "Tech, finance, research.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -73,19 +74,19 @@ const courseData = [
     title: "Computer Science Core Subjects",
     subtitle: "Essential CS Knowledge",
     bullets: [
-      "Cover the core subjects of computer science, including operating systems, networking, and theory of computation.",
+      "Cover the core subjects of computer science, including operating systems, networking, computation.",
       "Software Engineer, Network Engineer, Systems Analyst.",
-      "Tech, telecommunications, research.",
+      "Enterprise solutions, finance, mobile development.",
     ],
   },
   {
     image: co7,
-    title: "Database Management Systems (DBMS) and MySQL",
+    title: " DBMS and MySQL",
     subtitle: "Database Design and Management",
     bullets: [
       "Learn the fundamentals of DBMS and gain practical skills in MySQL.",
       "Database Administrator, Backend Developer, Data Analyst.",
-      "Tech, finance, e-commerce.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -95,7 +96,7 @@ const courseData = [
     bullets: [
       "Master the design and analysis of algorithms to solve complex computational problems.",
       "Algorithm Engineer, Software Developer, Systems Architect.",
-      "Tech, finance, research.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -105,7 +106,7 @@ const courseData = [
     bullets: [
       "Master MongoDB, ExpressJS, React, and Node for full-stack development.",
       "Full-Stack Developer, Backend Developer, Database Administrator.",
-      "Tech startups, e-commerce, social media platforms.",
+      "Tech startups, e-commerce, social media platforms with effectiveness.",
     ],
   },
   {
@@ -115,7 +116,7 @@ const courseData = [
     bullets: [
       "Learn MongoDB, Express.js, Angular, and Node.js for scalable applications.",
       "Full-Stack Developer, Frontend Developer, Backend Developer.",
-      "Startups, healthcare, finance.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
@@ -125,76 +126,157 @@ const courseData = [
     bullets: [
       "Craft end-to-end solutions, blending front-end and back-end development with Java.",
       "Full-Stack Developer, Backend Developer, Java Developer, Software Architect.",
-      "Opportunities in tech, finance, enterprise solutions, and e-commerce.",
+      "Enterprise solutions, finance, mobile development with efficiency",
     ],
   },
   {
-    image:co12,
+    image: co12,
     title: "Python Full Stack",
     subtitle: "Unleashing Simplicity and Versatility",
     bullets: [
       "Create full-stack solutions with Python, focusing on simplicity and rapid prototyping.",
       "Full-Stack Developer, Backend Developer, Frontend Developer, Data Scientist, DevOps Engineer.",
-      "Tech, startups, research, healthcare, education.",
+      "Enterprise solutions, finance, mobile development with efficiency",
+    ],
+  },
+  {
+    image: co7,
+    title: " DBMS and MySQL",
+    subtitle: "Database Design and Management",
+    bullets: [
+      "Learn the fundamentals of DBMS and gain practical skills in MySQL.",
+      "Database Administrator, Backend Developer, Data Analyst.",
+      "Enterprise solutions, finance, mobile development with efficiency",
+    ],
+  },
+  {
+    image: co8,
+    title: "Design and Analysis of Algorithms (DAA)",
+    subtitle: "Algorithmic Efficiency",
+    bullets: [
+      "Master the design and analysis of algorithms to solve complex computational problems.",
+      "Algorithm Engineer, Software Developer, Systems Architect.",
+      "Enterprise solutions, finance, mobile development with efficiency",
+    ],
+  },
+  {
+    image: co9,
+    title: "MERN Stack",
+    subtitle: "Revolutionizing Full-Stack Development",
+    bullets: [
+      "Master MongoDB, ExpressJS, React, and Node for full-stack development.",
+      "Full-Stack Developer, Backend Developer, Database Administrator.",
+      "Tech startups, e-commerce, social media platforms with effectiveness.",
+    ],
+  },
+  {
+    image: co7,
+    title: " DBMS and MySQL",
+    subtitle: "Database Design and Management",
+    bullets: [
+      "Learn the fundamentals of DBMS and gain practical skills in MySQL.",
+      "Database Administrator, Backend Developer, Data Analyst.",
+      "Enterprise solutions, finance, mobile development with efficiency",
+    ],
+  },
+  {
+    image: co8,
+    title: "Design and Analysis of Algorithms (DAA)",
+    subtitle: "Algorithmic Efficiency",
+    bullets: [
+      "Master the design and analysis of algorithms to solve complex computational problems.",
+      "Algorithm Engineer, Software Developer, Systems Architect.",
+      "Enterprise solutions, finance, mobile development with efficiency",
+    ],
+  },
+  {
+    image: co9,
+    title: "MERN Stack",
+    subtitle: "Revolutionizing Full-Stack Development",
+    bullets: [
+      "Master MongoDB, ExpressJS, React, and Node for full-stack development.",
+      "Full-Stack Developer, Backend Developer, Database Administrator.",
+      "Tech startups, e-commerce, social media platforms with effectiveness.",
     ],
   },
 ];
 
 const Courses = () => {
   return (
-    <section id="courses" className="py-16 px-4 bg-white">
-      <h2 className="text-3xl font-bold text-center text-purple-800 mb-10 underline decoration-4 decoration-purple-800">
+    <section
+      id="courses"
+      className="scroll-mt-10  py-15  bg-white relative overflow-visible"
+    >
+      <h2 className="text-3xl font-semibold text-center text-[#143075]  ">
         Courses Offered
       </h2>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        slidesPerGroup={1} // 👈 Add this line (or update if it already exists)
-        navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          768: { slidesPerView: 2, slidesPerGroup: 2 },
-          1024: { slidesPerView: 3, slidesPerGroup: 3 }, // 👈 This makes it slide 3 at once on large screens
-        }}
-      >
-        {courseData.map((course, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-white min-h-[580px] rounded-xl border border-gray-200 shadow hover:shadow-lg transition duration-300 h-full flex flex-col">
-              {/* Fixed Image Area */}
-              <div className="w-full h-48 overflow-hidden rounded-t-xl">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
 
-              {/* Locked Content Area */}
-              <div className="p-6 flex flex-col flex-grow justify-between">
-                {/* Title + Subtitle Centered */}
-                <div className="flex flex-col items-center justify-center text-center">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {course.title}
-                  </h3>
-                  <h4 className="text-sm font-medium text-gray-700 mt-1">
-                    {course.subtitle}
-                  </h4>
+      <div className="w-30 mt-1 h-1 bg-[#143075] mx-auto mb-10"></div>
+
+      <div className=" relative w-full max-w-[1340px] mx-auto">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          slidesPerGroup={1}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination",
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2, slidesPerGroup: 2 },
+            1024: { slidesPerView: 3, slidesPerGroup: 3 },
+          }}
+          className="pb-20"
+        >
+          {courseData.map((course, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white w-full max-w-[450px] min-h-[480px] h-full rounded-xl border border-gray-200 shadow transition duration-300 flex flex-col hover:border-blue-600">
+                {/* Image */}
+                <div className="flex items-center justify-center py-4">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-[370px] h-[210px] object-cover rounded mt-4"
+                  />
                 </div>
 
-                {/* Bullet Points always at bottom */}
-                <ul className="mt-6 list-disc list-inside text-sm text-gray-700 space-y-2 text-left">
-                  {course.bullets.map((point, idx) => (
-                    <li key={idx} className="leading-relaxed">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+                {/* Content */}
+                <div className="px-5 pb-5 flex flex-col justify-between flex-grow">
+                  <div className="text-center">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      {course.title}
+                    </h3>
+                    <h4 className="text-sm font-medium text-gray-700 mb-3">
+                      {course.subtitle}
+                    </h4>
+                  </div>
+                  <ul className="list-disc list-inside text-md text-gray-700 space-y-2 text-left">
+                    {course.bullets.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Arrows (React Icons) – outside section */}
+        <button className="hover:cursor-pointer custom-prev absolute top-[45%] -left-12 z-30 bg-[#143075] text-white p-1 rounded-full  shadow-lg">
+          <FaChevronLeft />
+        </button>
+        <button className="hover:cursor-pointer custom-next absolute top-[45%] -right-12 z-30 bg-[#143075] text-white p-1 rounded-full  shadow-lg">
+          <FaChevronRight />
+        </button>
+
+        {/* Dots below everything */}
+        <div className="custom-pagination flex justify-center mt-10 gap-5" />
+      </div>
     </section>
   );
 };

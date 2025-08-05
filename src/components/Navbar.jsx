@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Logo.png";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("Home");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location.pathname]);
 
   const scrollToSection = (id, name) => {
     setActiveNav(name);
@@ -20,8 +30,9 @@ const Navbar = () => {
   };
 
   const handleLogoClick = () => {
-    window.location.reload(); // Refresh page
+    window.location.href = "/";
   };
+
 
   const navItems = [
     { name: "HOME", id: "/" },

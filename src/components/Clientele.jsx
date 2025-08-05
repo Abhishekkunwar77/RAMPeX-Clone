@@ -30,21 +30,21 @@ const benefits = [
 const Clientele = () => {
   return (
     <section className="bg-[#e7e9ee] py-16 px-4">
-      <h2 className="text-4xl font-bold text-center text-[#3a0ca3] mb-2">
+      <h2 className="text-4xl font-semibold text-center text-[#143075] mb-2">
         Clientele Benefits
       </h2>
-      <div className="w-40 h-1 bg-[#3a0ca3] mx-auto mb-10"></div>
+      <div className="w-40 h-1 bg-[#143075] mx-auto mb-10"></div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  text-center">
         {benefits.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center">
             <img
               src={item.image}
               alt={item.title}
-              className="h-16 w-16 object-contain mb-4"
+              className="h-14 w-14 object-contain mb-4"
             />
-            <h3 className="text-lg font-semibold mt-2 mb-2">{item.title}</h3>
-            <p className="text-sm text-gray-800 max-w-[260px]">{item.desc}</p>
+            <h3 className="text-lg  mt-2 mb-2">{item.title}</h3>
+            <p className="text-[12px] text-gray-800 max-w-[260px]">{item.desc}</p>
           </div>
         ))}
       </div>

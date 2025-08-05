@@ -5,6 +5,10 @@
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 @keyframes scroll {
   0% {
@@ -16,6 +20,5 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 7s linear infinite;
 }
-
